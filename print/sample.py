@@ -10,3 +10,9 @@ if __name__ == '__main__':
 
     # print(data)
     print(data, end="")
+
+    w = open("./hosts", "w")
+
+    w.write(data)
+    w.close()
+    
