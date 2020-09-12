@@ -1,0 +1,12 @@
+Vmid              Name                                                 File                                          Guest OS       Version   Annotation
+1      example                       [datastore1] example/example.vmx                                            centos7_64Guest    vmx-13
+106    cloud-dev                     [WDS100T2B0A] cloud-dev_1/cloud-dev_1.vmx                                   centos7_64Guest    vmx-13
+107    desktop                       [WDS100T2B0A] desktop/desktop.vmx                                           ubuntu64Guest      vmx-13
+108    desktop2                      [WDS100T2B0A] desktop2/desktop2.vmx                                         ubuntu64Guest      vmx-13
+11     test.vm                       [WDS100T2B0A] test.vm/test.vm.vmx                                           centos7_64Guest    vmx-13    test vm
+111    restricted-rhel7              [WDS100T2B0A] restricted-rhel7/restricted-rhel7.vmx                         rhel7_64Guest      vmx-13
+112    space vm                      [WDS100T2B0A] space vm/space vm.vmx                                         centos7_64Guest    vmx-13
+13     debian-desktop                [WDS100T2B0A] debian-desktop/debian-desktop.vmx                             debian10_64Guest   vmx-13
+23     windows                       [WDS100T2B0A] windows8x64/windows8x64.vmx                                   windows8_64Guest   vmx-13
+77     win10-offline                 [WDS100T2B0A] win10-offline/win10-offline.vmx                               windows9_64Guest   vmx-13
+95     esxi-host                     [WDS100T2B0A] esxi-host/esxi-host.vmx                                       vmkernel65Guest    vmx-13
