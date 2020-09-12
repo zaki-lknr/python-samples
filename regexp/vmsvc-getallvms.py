@@ -5,7 +5,7 @@ import re
 if __name__ == '__main__':
     # print("hello")
 
-    pattern = '(\d+)\s+(.+)\s+\[(.+)\] (.+\.vmx)'
+    pattern = '(\d+)\s+(.+)\s+\[(.+)\] (.+\.vmx)\s+(\S+)\s+(\S+)'
 
     f = open("vmsvc-getallvms.txt")
     for line in iter(f.readline, ''):
@@ -17,6 +17,8 @@ if __name__ == '__main__':
             print("vm: " + result.group(2))
             print("ds: " + result.group(3))
             print("file: " + result.group(4))
+            print("guest: " + result.group(5))
+            print("version: " + result.group(6))
 
 
     f.close()
