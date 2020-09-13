@@ -7,14 +7,15 @@ import argparse
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("echo")
+    parser.add_argument("echo", help="echo the string you use here")
     args = parser.parse_args()
 
     print(args.echo)
 
     # 上のコードで下記のようにオプション/引数指定で実行
     # 引数(echo)が必須になり、未指定時にはエラー(簡易メッセージ)となる。
-    # -hで詳しいメッセージが出力される
+    # -hで詳しいメッセージが出力される。
+    # その際は`add_argument()`の引数にhelp=(string)でセットしたものが表示される。
 
     """
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py 
@@ -24,7 +25,7 @@ if __name__ == '__main__':
     usage: sample.py [-h] echo
 
     positional arguments:
-    echo
+    echo        echo the string you use here
 
     optional arguments:
     -h, --help  show this help message and exit
