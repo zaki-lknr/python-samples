@@ -9,34 +9,42 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("echo", help="echo the string you use here")
     parser.add_argument("square", help="display a square of a given number", type=int)
+    parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
     args = parser.parse_args()
 
-    print(args.echo)
-    print(args.square**2)
+    # print(args.echo)
+    # print(args.square**2)
+    answer = args.square**2
+    if args.verbose:
+        print("the square of {} equals {}".format(args.square, answer))
+    else:
+        print(answer)
 
     # 上のコードで下記のようにオプション/引数指定で実行
-    # 引数(echo)が必須になり、未指定時にはエラー(簡易メッセージ)となる。
+    # 引数(echo, square)は必須・未指定時にはエラー(簡易メッセージ)となる。
     # -hで詳しいメッセージが出力される。
     # その際は`add_argument()`の引数にhelp=(string)でセットしたものが表示される。
     # 更にtype=intを指定すると、integerとして扱われる。
+    # -v|--verboseはオプションなので無くても良いし順序も問われない。
 
     """
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py 
-    usage: sample.py [-h] echo square
+    usage: sample.py [-h] [-v] echo square
     sample.py: error: the following arguments are required: echo, square
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py -h
-    usage: sample.py [-h] echo square
+    usage: sample.py [-h] [-v] echo square
 
     positional arguments:
-    echo        echo the string you use here
-    square      display a square of a given number
+    echo           echo the string you use here
+    square         display a square of a given number
 
     optional arguments:
-    -h, --help  show this help message and exit
+    -h, --help     show this help message and exit
+    -v, --verbose  increase output verbosity
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4
-    hoge
     16
-    (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge four
-    usage: sample.py [-h] echo square
-    sample.py: error: argument square: invalid int value: 'four'
+    (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4 -v
+    the square of 4 equals 16
+    (paramiko) [zaki@cloud-dev argparse]$ python sample.py -v hoge 4 
+    the square of 4 equals 16
     """
