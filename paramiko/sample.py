@@ -8,6 +8,14 @@ client.connect("192.168.0.20", username='zaki', key_filename="/home/zaki/.ssh/id
 stdin, stdout, stderr = client.exec_command("hostname")
 for line in stdout:
     print(line)
+stdin, stdout, stderr = client.exec_command('echo $?')
+for line in stdout:
+    print(line)
+stdin, stdout, stderr = client.exec_command('ls /nonedir; echo $?')
+for line in stdout:
+    print(line)
+
+
 stdin, stdout, stderr = client.exec_command("/sbin/ip a")
 for line in stdout:
     print(line.rstrip())
