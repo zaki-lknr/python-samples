@@ -40,6 +40,22 @@ for line in stdout:
         }
 # print("\n")
 
+vmid = vmlist[vmname]["vmid"]
+power_state_on = True
+stdin, stdout, stderr = client.exec_command("vim-cmd vmsvc/power.getstate " + vmid)
+for line in stdout:
+    #print(line.rstrip())
+    result = re.match("^Powered (.+)", line)
+    if result:
+        if result.group(1) == "on":
+            power_state_on = True
+        elif result.group(1) == "off":
+            power_state_on = False
+        else:
+            raise Exception("unknown state: '" + result.group(1) + "'")
+
+print("state: " + str(power_state_on))
+
 stdin.close()
 stdout.close()
 stderr.close()
@@ -47,4 +63,4 @@ stderr.close()
 client.close()
 
 # print(vmlist)
-print(vmlist[vmname]["vmid"])
+# print(vmlist[vmname]["vmid"])
