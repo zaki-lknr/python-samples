@@ -1,5 +1,4 @@
 class Animal:
-    nakigoe = ""
     def set_nakigoe(self, a):
         self.nakigoe = a
 
