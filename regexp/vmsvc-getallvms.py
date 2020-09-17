@@ -5,7 +5,7 @@ import re
 if __name__ == '__main__':
     # print("hello")
 
-    pattern = '(\d+)\s+(.+?)\s+\[(.+)\] (.+\.vmx)\s+(\S+)\s+(\S+)'
+    pattern = r'(\d+)\s+(.+?)\s+\[(.+)\] (.+\.vmx)\s+(\S+)\s+(\S+)'
 
     vmlist = {}
 
