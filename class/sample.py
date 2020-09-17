@@ -20,10 +20,12 @@ class Cat(Animal):
     #     else:
     #         print("nya-n")
 
-neko = Animal("nya-n")
-neko.naku()
-neko.naku("wanwan")
-neko.naku()
 
-cat = Cat()
-cat.naku()
+if __name__ == '__main__':
+    neko = Animal("nya-n")
+    neko.naku()
+    neko.naku("wanwan")
+    neko.naku()
+
+    cat = Cat()
+    cat.naku()
