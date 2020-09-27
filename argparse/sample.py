@@ -10,7 +10,7 @@ if __name__ == '__main__':
     parser.add_argument("echo", help="echo the string you use here")
     parser.add_argument("square", help="display a square of a given number", type=int)
     #parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
-    parser.add_argument("-v", "--verbose", help="increase output verbosity", type=int)
+    parser.add_argument("-v", "--verbose", help="increase output verbosity", type=int, choices=[0,1,2])
     args = parser.parse_args()
 
     # print(args.echo)
@@ -30,7 +30,8 @@ if __name__ == '__main__':
     # 更にtype=intを指定すると、integerとして扱われる。
     #
     # -v|--verboseはオプションなので無くても良いし順序も問われない。
-    # ただしtype=intなので-v指定時は引数に数値が必要
+    # ただしtype=intなので-v指定時は引数に数値が必要。
+    # 指定できる数値の範囲はchoicesで指定。
 
     """
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py 
@@ -40,12 +41,13 @@ if __name__ == '__main__':
     usage: sample.py [-h] [-v] echo square
 
     positional arguments:
-    echo           echo the string you use here
-    square         display a square of a given number
+    echo                  echo the string you use here
+    square                display a square of a given number
 
     optional arguments:
-    -h, --help     show this help message and exit
-    -v, --verbose  increase output verbosity
+    -h, --help            show this help message and exit
+    -v {0,1,2}, --verbose {0,1,2}
+                            increase output verbosity
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4
     16
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4 -v
@@ -57,4 +59,7 @@ if __name__ == '__main__':
     the square of 4 equals 16
     (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4
     16
+    (paramiko) [zaki@cloud-dev argparse]$ python sample.py hoge 4 -v 3
+    usage: sample.py [-h] [-v {0,1,2}] echo square
+    sample.py: error: argument -v/--verbose: invalid choice: 3 (choose from 0, 1, 2)
     """
