@@ -29,3 +29,9 @@ if __name__ == '__main__':
 
     cat = Cat()
     cat.naku()
+
+    print("---")
+    print(cat.nakigoe)
+    cat.nakigoe = 'foo'
+    print(cat.nakigoe)
+    cat.naku()
