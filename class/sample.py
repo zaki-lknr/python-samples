@@ -8,12 +8,19 @@ class Animal:
         else:
             print(self.__nakigoe)
 
+    @property
+    def nakigoe(self):
+        return self.__nakigoe
+    @nakigoe.setter
+    def nakigoe(self, value):
+        self.__nakigoe = value
+
 class Cat(Animal):
     def __init__(self, a=None):
         if a:
-            self._Animal__nakigoe = a
+            self.nakigoe = a
         else:
-            self._Animal__nakigoe = "nya-n"
+            self.nakigoe = "nya-n"
     # def naku(self, arg=None):
     #     if arg:
     #         print(arg)
@@ -30,11 +37,11 @@ if __name__ == '__main__':
     cat = Cat()
     cat.naku()
 
-    # print("---")
-    # print(cat.__nakigoe)
-    # cat.__nakigoe = 'foo'
-    # print(cat.__nakigoe)
-    # cat.naku()
+    print("---")
+    print(cat.nakigoe)
+    cat.nakigoe = 'foo'
+    print(cat.nakigoe)
+    cat.naku()
 
     ## __が付いてるフィールドはprivateになるのでアクセスできない
     # 
