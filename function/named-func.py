@@ -1,4 +1,4 @@
-def function(arg1, arg2):
+def function(arg1, arg2='zzz'):
     print("arg1: " + arg1)
     print("arg2: " + arg2)
 
@@ -9,3 +9,5 @@ if __name__ == '__main__':
     function(arg1="val1", arg2="val2")
     print("---")
     function(arg2="bar", arg1="foo")
+    print("---")
+    function(arg1="foo")
