@@ -15,6 +15,12 @@ class Animal:
     def nakigoe(self, value):
         self.__nakigoe = value
 
+    def sample_method(self):
+        print("called sample_method()")
+
+    def sample_method2(self):
+        self.sample_method()
+
 class Cat(Animal):
     def __init__(self, a=None):
         if a:
