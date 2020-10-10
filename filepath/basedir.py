@@ -19,3 +19,9 @@ dirname:
 basename:     basedir.py
 dirname:      /home/zaki/src/python/filepath
 """
+
+samplepath = '/a/b/c/d/e'
+print('basename: ' + os.path.basename(samplepath))
+print('dirname:  ' + os.path.dirname(samplepath))
+# basename: e
+# dirname:  /a/b/c/d
