@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name='myfirstmodule',
-    version='0.1',
+    version='0.2',
     description='module practice',
     author='zaki',
     author_email='zaki.hmkc+github@gmail.com',
