@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
 import setuptools
 
 setuptools.setup(
     name='myfirstmodule',
-    version='0.2',
+    version='0.3',
     description='module practice',
     author='zaki',
     author_email='zaki.hmkc+github@gmail.com',
