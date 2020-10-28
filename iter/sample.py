@@ -1,3 +1,14 @@
+import myiter
+
+my = myiter.MyIterSample()
+my.add(10)
+my.add(20)
+my.add(30)
+for z in my:
+    print(z)
+
+print("---")
+
 mylist = ['foo', 'bar', 'baz']
 
 for item in mylist:
