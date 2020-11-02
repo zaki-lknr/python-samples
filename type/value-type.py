@@ -19,3 +19,14 @@ if type(int_list[3]) == str:
 
 if type(dict_sample) == dict:
     print("dict_sample is dict")
+
+print(str(type(int_list)))
+print(str(type(int_list[0])))
+print(str(type(int_list[3])))
+print(str(type(dict_sample)))
+
+# ^^^の出力は以下の通り
+# <class 'list'>
+# <class 'int'>
+# <class 'str'>
+# <class 'dict'>
