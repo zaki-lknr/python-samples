@@ -16,3 +16,8 @@ print('splitext: ' + str(p))
 path, ext = os.path.splitext(samplepath)
 print('path: ' + path)
 print('ext:  ' + ext)
+
+# 戻り値はタプル
+path_only = os.path.splitext(samplepath)
+print('path: ' + str(path_only))
+print('path: ' + path_only[0])
