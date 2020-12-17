@@ -5,7 +5,7 @@ if __name__ == '__main__':
 
     # デフォルトはwarning以上
     # この設定を入れるとdebug以上が出力される
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG, filename="./app.log")
 
     logging.critical('これはcritical')
     logging.error('これはerror')
