@@ -1,6 +1,7 @@
 import configparser
 
-ini = configparser.ConfigParser()
+ini = configparser.ConfigParser(inline_comment_prefixes=(';', '#'))
+# ini = configparser.ConfigParser()
 ini.read('sample.ini')
 interpreter = ini.get('defaults', 'interpreter_python')
 ssh_config = ini.get('ssh_connection', 'ssh_args')
