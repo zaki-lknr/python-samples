@@ -1,3 +1,8 @@
+def get_list():
+    list1 = [1,2,3]
+    list2 = ['foo', 'bar', 'baz']
+    return [list1, list2]
+
 def get_tuple():
     list1 = [1,2,3]
     list2 = ['foo', 'bar', 'baz']
@@ -8,5 +13,9 @@ if __name__ == '__main__':
     print(a)    # [1,2,3,4]
     print(b)    # ['foo', 'bar', 'baz']
 
+    l = get_list()
+    l.append([9, 8, 7])  # listなのでOK
+    print(l)
+
     t = get_tuple()
-    t.apppend([9, 8, 7])  # tupleなのでNG
+    t.append([9, 8, 7])  # tupleなのでNG
