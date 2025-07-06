@@ -12,6 +12,14 @@ curry = {
     'grape_seed_oil': '200g'
 }
 
-print(json.dumps(curry))
+#print(json.dumps(curry))
 
-print(json.dumps(curry, indent=2))
+json_string = json.dumps(curry, indent=2)
+print(type(json_string))
+# print(json_string)
+
+obj = json.loads(json_string)
+print(type(obj))
+print(obj)
+
+print(obj == curry)
