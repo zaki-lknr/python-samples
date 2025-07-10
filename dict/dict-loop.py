@@ -6,3 +6,6 @@ sample_dict = {
 
 for k, v in sample_dict.items():
     print("key: " + k + ", value: " + v)
+
+for v in sample_dict.values():
+    print(v)
