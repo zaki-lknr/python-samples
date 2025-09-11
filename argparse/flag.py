@@ -13,12 +13,14 @@ if __name__ == '__main__':
     ### -v foobar など
     ### -v ごとなければNone
     parser.add_argument("-o", "--opt", help="option")
+
+    ## -v があればTrue / なければFalse
+    ## -v の後に引数があるとエラー
+    parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
+
+
     args = parser.parse_args()
     d = args.opt or data
     print(d)
 
-    ### -v があればTrue / なければFalse
-    ### -v の後に引数があるとエラー
-    # parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
-    # args = parser.parse_args()
-    # print(args.verbose)
+    print(args.verbose)
