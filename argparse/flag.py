@@ -14,6 +14,7 @@ if __name__ == '__main__':
     ### -v ごとなければNone
     parser.add_argument("-o", "--opt", help="option")
 
+    ### store_true:
     ## -v があればTrue / なければFalse
     ## -v の後に引数があるとエラー
     parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
