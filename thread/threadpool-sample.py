@@ -1,3 +1,6 @@
+
+# https://docs.python.org/ja/3/library/concurrent.futures.html
+
 from concurrent.futures import ThreadPoolExecutor
 import time
 

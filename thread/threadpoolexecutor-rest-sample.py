@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# https://docs.python.org/ja/3/library/concurrent.futures.html
+
 import requests
 import threading
 from concurrent.futures import ThreadPoolExecutor
